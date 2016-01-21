@@ -1,0 +1,35 @@
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "Show Me Your Junk™",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.14.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-ejs-layouts": "^2.0.0",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.3.6",
+    "morgan": "^1.6.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfadem82/project3.git"
+  },
+  "author": "Josh, Kristin, & Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfadem82/project3/issues"
+  },
+  "homepage": "https://github.com/jfadem82/project3#readme"
+}

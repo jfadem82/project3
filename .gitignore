@@ -1,2 +1,3 @@
 /node_modules
-/couches/.jpg/.tiff/.png
+/couches/*.jpg
+/couches/*.png

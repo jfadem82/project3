@@ -4,7 +4,7 @@
 ![](/assets/Project03_Flowchart.png)
 
 ##User Stories
-![](/assets/Project03_UserStories.png)
+![](/assets/UserStories.png)
 ## Wireframes
 ### Home Page
 ![](/assets/Project03_WF01.png)

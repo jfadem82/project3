@@ -8,8 +8,9 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+var mongoUri     = process.env.MONGOLAB_URI || 'mongodb://localhost/project3'
 
-mongoose.connect('mongodb://localhost/project3'); 
+mongoose.connect(mongoUri); 
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
@@ -36,4 +37,4 @@ app.use(function (req, res, next) {
 var routes = require('./config/routes');
 app.use(routes);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);

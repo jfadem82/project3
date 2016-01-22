@@ -1,28 +1,39 @@
-var port 		 = process.env.PORT || 3000
-var express 	 = require('express');
-var path 		 = require('path')
-var app 		 = express();
-var mongoose 	 = require('mongoose');
-var passport 	 = require('passport');
-var flash		 = require('connect-flash');
-var ejsLayouts	 = require('express-ejs-layouts');
-var logger 		 = require('morgan');
+var express      = require('express');
+var app          = express();
+var mongoose     = require('mongoose');
+var passport     = require('passport');
+var flash        = require('connect-flash');
+var ejsLayouts   = require("express-ejs-layouts");
+var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser 	 = require('body-parser');
-var session 	 = require('express-session');
-var mongoUri 	 = process.env.MONGOLAB_URI || 'mongodb://localhost/project3'
+var bodyParser   = require('body-parser');
+var session      = require('express-session');
 
-app.use(logger('dev'));
+mongoose.connect('mongodb://localhost/project3'); 
+
+app.use(morgan('dev')); 
 app.use(cookieParser());
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 app.set('view engine', 'ejs');
-app.engine('ejs', require ('ejs').renderFile);
 app.use(ejsLayouts);
+app.set("views","./views");
+app.use(express.static(__dirname + '/public'));
 
-mongoose.connect(mongoUri)
+app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' })); 
+app.use(passport.initialize());
+app.use(passport.session()); 
+app.use(flash()); 
 
+require('./config/passport')(passport);
 
-app.listen(port)
-console.log('The server is running on port ' + port)
+app.use(function (req, res, next) {
+  global.user = req.user;
+  next()
+});
+
+var routes = require('./config/routes');
+app.use(routes);
+
+app.listen(3000);

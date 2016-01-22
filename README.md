@@ -1,4 +1,4 @@
-# Project 3 - Show Us Your Junk
+# Project 3 - Show Me Your Junk
 
 ##Flowchart
 ![](/assets/Project03_Flowchart.png)

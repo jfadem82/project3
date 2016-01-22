@@ -3,9 +3,10 @@ var mongoose = require('mongoose');
 var postSchema = new mongoose.Schema( {
 	title: String,
 	description: String,
-	location: String
+	location: String,
+
 })
 
 var Post = mongoose.model('Post', postSchema);
 
-module.exports = Post
+module.exports = Post    

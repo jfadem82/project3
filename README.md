@@ -1,7 +1,7 @@
 # Project 3 - Show Us Your Junk
 
 ##Flowchart
-![](/Users/kristinhoffer/Desktop/School/General_Assembly/WDI_Immersive/WDI/project03/project3/assets/Project03_Flowchart.png)
+![](/assets/Project03_Flowchart.png)
 
 ## Wireframes
 ### Home Page

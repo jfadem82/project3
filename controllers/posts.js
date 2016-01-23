@@ -30,7 +30,7 @@ function create (req, res) {
 
 	post.save(function(err) {
 		if (err) console.log(err)
-		// res.redirect('posts')
+		res.redirect('posts')
 	})
 }
 

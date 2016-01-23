@@ -40,7 +40,7 @@ router.route('/posts')
 
 router.route('/posts/new')
   .get(postsController.newPost)
-  // .post(postsController.create)
+  .post(postsController.create)
 
 router.route('/posts/:id')
   .get(postsController.show)

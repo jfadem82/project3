@@ -29,13 +29,22 @@ router.route('/login')
   .get(usersController.getLogin)
   .post(usersController.postLogin)
 
-router.route("/logout")
+router.route('/logout')
   .get(usersController.getLogout)
 
-router.route("/secret")
+router.route('/secret')
   .get(usersController.secret)
 
-router.route("/posts")
+router.route('/posts')
   .get(postsController.index)
+
+router.route('/posts/new')
+  .get(postsController.newPost)
+  // .post(postsController.create)
+
+router.route('/posts/:id')
+  .get(postsController.show)
+
+
 
 module.exports = router

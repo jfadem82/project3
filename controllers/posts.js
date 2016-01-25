@@ -36,24 +36,29 @@ function create (req, res) {
 }
 
 // function editPost (req, res) {
-// 	res.render('editpost.ejs')
+// 	var id = req.params.id;
+
+// 	Post.findById({_id: id}, function (err, post) {
+// 		if (err) console.log(err)
+// 		res.render('editpost.ejs', {post: post});
+// 	})
 // }
 
 // function update (req, res) {
-// 	var id = req.params.id;
+// 	// var id = req.params.id;
 
-// 	Post.findById({_id: id}, function(err, post) {
-// 		if (err) console.log(err)
-// 	})
+// 	// Post.findById({_id: id}, function(err, post) {
+// 	// 	if (err) console.log(err)
+// 	// })
 	
 
 // 	if(req.body.title) post.title = req.body.title;
 // 	if(req.body.description) post.description = req.body.description;
 // 	if(req.body.location) post.location = req.body.location;
 
-// 	post.save(function(err) {
+// 	post.save(function(err, post) {
 // 		if (err) console.log(err)
-// 		res.redirect('posts')
+// 		res.redirect('/')
 // 	})
 // }
 
@@ -62,4 +67,6 @@ module.exports = {
 	show: show,
 	newPost: newPost,
 	create: create
+	// editPost: editPost,
+	// update: update
 }

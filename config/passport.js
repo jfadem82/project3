@@ -63,9 +63,9 @@ module.exports = function(passport) {
 
    passport.use(new FacebookStrategy({
 
-       clientID        : configAuth.facebookAuth.clientID,
-       clientSecret    : configAuth.facebookAuth.clientSecret,
-       callbackURL     : configAuth.facebookAuth.callbackURL,
+       clientID        : FACEBOOK_APP_ID,
+       clientSecret    : FACEBOOK_APP_SECRET,
+       callbackURL     : 'https://show-me-your-junk.herokuapp.com/auth/facebook/callback',
        profileFields   : ["emails", "displayName", "name"]
 
    },

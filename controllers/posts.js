@@ -31,7 +31,7 @@ function create (req, res) {
 
 	post.save(function(err) {
 		if (err) console.log(err)
-		res.redirect('/')
+		res.redirect('/posts')
 	})
 }
 

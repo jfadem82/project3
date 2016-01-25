@@ -18,8 +18,8 @@ function authenticatedUser(req, res, next) {
 }
 
 
-router.route('/')
-  .get(staticsController.home);
+// router.route('/')
+//   .get(staticsController.home);
 
 router.route('/signup')
   .get(usersController.getSignup)
@@ -42,7 +42,7 @@ router.route('/auth/facebook')
 router.route('/auth/facebook/callback')
    .get(usersController.getFacebookCallback)
 
-router.route('/posts')
+router.route('/')
   .get(postsController.index)
 
 router.route('/posts/new')
@@ -51,7 +51,6 @@ router.route('/posts/new')
 
 router.route('/posts/:id')
   .get(postsController.show)
-  
 
 
 

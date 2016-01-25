@@ -52,7 +52,7 @@ function getFacebookCallback(request, response) {
 // GET /logout
 function getLogout(request, response) {
   request.logout();
-  response.redirect('/');
+  response.redirect('/secret');
 }
 
 // Restricted page

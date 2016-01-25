@@ -34,4 +34,12 @@ router.route("/logout")
 router.route("/secret")
   .get(usersController.secret)
 
+router.route('/auth/facebook')
+  .get(usersController.getFacebook)
+
+router.route('/auth/facebook/callback')
+   .get(usersController.getFacebookCallback)
+
+
+
 module.exports = router

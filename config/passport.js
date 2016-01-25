@@ -61,44 +61,44 @@ module.exports = function(passport) {
       });
    }));
 
-   passport.use(new FacebookStrategy({
+   // passport.use(new FacebookStrategy({
 
-       clientID        : FACEBOOK_APP_ID,
-       clientSecret    : FACEBOOK_APP_SECRET,
-       callbackURL     : 'https://show-me-your-junk.herokuapp.com/,
-       profileFields   : ["emails", "displayName", "name"]
+   //     clientID        : configAuth.facebookAuth.clientID,
+   //     clientSecret    : configAuth.facebookAuth.clientSecret,
+   //     callbackURL     : configAuth.facebookAuth.callbackURL,
+   //     profileFields   : ["emails", "displayName", "name"]
 
-   },
+   // },
 
-   function(token, refreshToken, profile, done) {
+   // function(token, refreshToken, profile, done) {
 
-       process.nextTick(function() {
+   //     process.nextTick(function() {
 
-           User.findOne({ 'facebook.id' : profile.id }, function(err, user) {
+   //         User.findOne({ 'facebook.id' : profile.id }, function(err, user) {
 
-               if (err)
-                   return done(err);
+   //             if (err)
+   //                 return done(err);
 
-               if (user) {
-                   return done(null, user); 
-               } else {
-                   var newUser            = new User();
+   //             if (user) {
+   //                 return done(null, user); 
+   //             } else {
+   //                 var newUser            = new User();
 
-                   newUser.facebook.id    = profile.id; 
-                   newUser.facebook.token = token; 
-                   newUser.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName; 
-                   newUser.facebook.email = profile.emails[0].value; 
+   //                 newUser.facebook.id    = profile.id; 
+   //                 newUser.facebook.token = token; 
+   //                 newUser.facebook.name  = profile.name.givenName + ' ' + profile.name.familyName; 
+   //                 newUser.facebook.email = profile.emails[0].value; 
 
 
-                   newUser.save(function(err) {
-                       if (err)
-                           throw err;
+   //                 newUser.save(function(err) {
+   //                     if (err)
+   //                         throw err;
 
-                       return done(null, newUser);
-                   });
-               }
+   //                     return done(null, newUser);
+   //                 });
+   //             }
 
-           });
-       });
-   }));
+   //         });
+   //     });
+   // }));
 }

@@ -7,6 +7,7 @@ var methodOverride = require('method-override');
 var passport = require("passport");
 var usersController = require('../controllers/users');
 var staticsController = require('../controllers/statics');
+var postsController = require('../controllers/posts')
 
 function authenticatedUser(req, res, next) {
     // If the user is authenticated, then we continue the execution
@@ -28,17 +29,29 @@ router.route('/login')
   .get(usersController.getLogin)
   .post(usersController.postLogin)
 
-router.route("/logout")
+router.route('/logout')
   .get(usersController.getLogout)
 
-router.route("/secret")
+router.route('/secret')
   .get(usersController.secret)
+
 
 router.route('/auth/facebook')
   .get(usersController.getFacebook)
 
 router.route('/auth/facebook/callback')
    .get(usersController.getFacebookCallback)
+
+router.route('/posts')
+  .get(postsController.index)
+
+router.route('/posts/new')
+  .get(postsController.newPost)
+  .post(postsController.create)
+
+router.route('/posts/:id')
+  .get(postsController.show)
+
 
 
 

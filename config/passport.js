@@ -65,7 +65,7 @@ module.exports = function(passport) {
 
        clientID        : FACEBOOK_APP_ID,
        clientSecret    : FACEBOOK_APP_SECRET,
-       callbackURL     : 'https://show-me-your-junk.herokuapp.com/auth/,
+       callbackURL     : 'https://show-me-your-junk.herokuapp.com/,
        profileFields   : ["emails", "displayName", "name"]
 
    },

@@ -51,6 +51,7 @@ router.route('/posts/new')
 
 router.route('/posts/:id')
   .get(postsController.show)
+  
 
 
 

@@ -27,6 +27,7 @@ function create (req, res) {
 	post.title = req.body.title;
 	post.description = req.body.description;
 	post.location = req.body.location;
+	post.user = req.user._id; 
 
 	post.save(function(err) {
 		if (err) console.log(err)

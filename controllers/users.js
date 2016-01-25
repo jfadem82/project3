@@ -32,24 +32,24 @@ function postLogin(request, response) {
     return loginProperty(request, response);
   }
 
-// function getFacebook(request, response) {
-//    var signupStrategy = passport.authenticate('facebook', {
-//      scope : 'email'
-//    });
+function getFacebook(request, response) {
+   var signupStrategy = passport.authenticate('facebook', {
+     scope : 'email'
+   });
 
-//    return signupStrategy(request, response);
-//  }
+   return signupStrategy(request, response);
+ }
 
-// function getFacebookCallback(request, response) {
-//    var loginProperty = passport.authenticate('facebook', {
-//      successRedirect : '/',
-//      failureRedirect : '/login'
-//    });
+function getFacebookCallback(request, response) {
+   var loginProperty = passport.authenticate('facebook', {
+     successRedirect : '/',
+     failureRedirect : '/login'
+   });
 
-//    return loginProperty(request, response);
-//  }
+   return loginProperty(request, response);
+ }
 
-// GET /logout
+GET /logout
 function getLogout(request, response) {
   request.logout();
   response.redirect('/');
@@ -65,8 +65,8 @@ module.exports = {
   postLogin: postLogin ,
   getSignup: getSignup,
   postSignup: postSignup,
-  // getFacebook: getFacebook,
-  // getFacebookCallback: getFacebookCallback,
+  getFacebook: getFacebook,
+  getFacebookCallback: getFacebookCallback,
   getLogout: getLogout,
   secret: secret
 }

@@ -42,7 +42,7 @@ function getFacebook(request, response) {
 
 function getFacebookCallback(request, response) {
    var loginProperty = passport.authenticate('facebook', {
-     successRedirect : '/',
+     successRedirect : '/secret',
      failureRedirect : '/login'
    });
 
@@ -52,7 +52,7 @@ function getFacebookCallback(request, response) {
 // GET /logout
 function getLogout(request, response) {
   request.logout();
-  response.redirect('/secret');
+  response.redirect('/');
 }
 
 // Restricted page

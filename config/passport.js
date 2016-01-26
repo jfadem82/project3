@@ -63,9 +63,9 @@ module.exports = function(passport) {
 
    passport.use(new FacebookStrategy({
 
-       clientID        : configAuth.facebookAuth.clientID,
-       clientSecret    : configAuth.facebookAuth.clientSecret,
-       callbackURL     : configAuth.facebookAuth.callbackURL,
+       clientID        : process.env.FACEBOOK_APP_ID || configAuth.facebookAuth.clientID,
+       clientSecret    : process.env.FACEBOOK_APP_SECRET || configAuth.facebookAuth.clientSecret,
+       callbackURL     : process.env.FACEBOOK_CALLBACK_URL || configAuth.facebookAuth.callbackURL,
        profileFields   : ["emails", "displayName", "name"]
 
    },

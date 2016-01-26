@@ -42,7 +42,7 @@ function getFacebook(request, response) {
 
 function getFacebookCallback(request, response) {
    var loginProperty = passport.authenticate('facebook', {
-     successRedirect : '/secret',
+     successRedirect : '/',
      failureRedirect : '/login'
    });
 

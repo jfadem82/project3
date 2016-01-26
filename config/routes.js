@@ -52,9 +52,9 @@ router.route('/posts/new')
 
 router.route('/posts/:id')
 
-  .get(postsController.show)
+  
   // .patch(postsController.update)
-  .delete(postsController.removePost)
+  .delete(authenticatedUser, postsController.removePost)
 
   .get(authenticatedUser, postsController.show)
   // .patch(postsController.update)
@@ -63,8 +63,6 @@ router.route('/posts/:id')
   // .get(postsController.editPost)
 
 
-router.route('/posts/:id/edit')
-  .get(postsController.editPost)
-  
+
 
 module.exports = router

@@ -51,7 +51,8 @@ router.route('/posts/new')
 
 router.route('/posts/:id')
   .get(postsController.show)
-  .patch(postsController.update)
+  // .patch(postsController.update)
+  .delete(postsController.removePost)
 
 router.route('/posts/:id/edit')
   .get(postsController.editPost)

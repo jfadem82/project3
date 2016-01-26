@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
-app.set("views","./views");
+app.set("views", "./views");
 app.use(express.static(__dirname + '/public'));
 
 app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' })); 

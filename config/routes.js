@@ -51,6 +51,11 @@ router.route('/posts/new')
   .post(postsController.create)
 
 router.route('/posts/:id')
+
+  
+  // .patch(postsController.update)
+  .delete(authenticatedUser, postsController.removePost)
+
   .get(authenticatedUser, postsController.show)
   // .patch(postsController.update)
 

@@ -12,7 +12,7 @@ function show (req, res) {
 
 	Post.findById({_id: id}, function (err, post) {
 		if (err) console.log(err)
-		res.render('show.ejs', {post: post});
+		res.render('./show.ejs', {post: post});
 	})
 }
 
@@ -29,9 +29,9 @@ function create (req, res) {
 	post.location = req.body.location;
 	post.user = req.user._id; 
 
-	post.save(function(err) {
+	post.save(function(err, post) {
 		if (err) console.log(err)
-		res.redirect('/posts')
+		res.redirect('/')
 	})
 }
 

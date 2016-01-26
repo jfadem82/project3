@@ -3,6 +3,8 @@
 ##Flowchart
 ![](/assets/Project03_Flowchart.png)
 
+##User Stories
+![](/assets/UserStories.png)
 ## Wireframes
 ### Home Page
 ![](/assets/Project03_WF01.png)

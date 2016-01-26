@@ -1,0 +1,19 @@
+
+<h2>Edit Post</h2>
+<form method="patch" action="/posts/<% post.id %>/edit">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input class="form-control" type="text" name="title" id="title">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input class="form-control" type="text" name="description" id="description">
+  </div>
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input class="form-control" type="address" name="location" id="location">
+  </div>
+
+ 
+  <input class="btn btn-primary" type="submit">
+</form>

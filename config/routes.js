@@ -8,18 +8,19 @@ var passport = require("passport");
 var usersController = require('../controllers/users');
 var staticsController = require('../controllers/statics');
 var postsController = require('../controllers/posts')
+var user = require('../models/user')
 
 function authenticatedUser(req, res, next) {
     // If the user is authenticated, then we continue the execution
   if (req.isAuthenticated()) return next();
 
     // Otherwise the request is always redirected to the home page
-  res.redirect('/');
+  res.redirect('/login');
 }
 
 
-router.route('/')
-  .get(staticsController.home);
+// router.route('/')
+//   .get(staticsController.home);
 
 router.route('/signup')
   .get(usersController.getSignup)
@@ -42,15 +43,19 @@ router.route('/auth/facebook')
 router.route('/auth/facebook/callback')
    .get(usersController.getFacebookCallback)
 
-router.route('/posts')
+router.route('/')
   .get(postsController.index)
 
 router.route('/posts/new')
-  .get(postsController.newPost)
+  .get(authenticatedUser, postsController.newPost)
   .post(postsController.create)
 
 router.route('/posts/:id')
-  .get(postsController.show)
+  .get(authenticatedUser, postsController.show)
+  // .patch(postsController.update)
+
+// router.route('/posts/:id/edit')
+  // .get(postsController.editPost)
 
 
 

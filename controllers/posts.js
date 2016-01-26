@@ -12,7 +12,7 @@ function show (req, res) {
 
 	Post.findById({_id: id}, function (err, post) {
 		if (err) console.log(err)
-		res.render('show.ejs', {post: post});
+		res.render('./show.ejs', {post: post});
 	})
 }
 
@@ -27,13 +27,15 @@ function create (req, res) {
 	post.title = req.body.title;
 	post.description = req.body.description;
 	post.location = req.body.location;
+	post.user = req.user._id; 
 
-	post.save(function(err) {
+	post.save(function(err, post) {
 		if (err) console.log(err)
 		res.redirect('/')
 	})
 }
 
+<<<<<<< HEAD
 function editPost (req, res) {
 	var id = req.params.id;
 
@@ -101,20 +103,32 @@ function editPost (req, res) {
 }
 
 // function update (req, res) {
+
+// function editPost (req, res) {
+
 // 	var id = req.params.id;
 
-// 	Post.findById({_id: id}, function(err, post) {
+// 	Post.findById({_id: id}, function (err, post) {
 // 		if (err) console.log(err)
+// 		res.render('editpost.ejs', {post: post});
 // 	})
+// }
+
+// function update (req, res) {
+// 	// var id = req.params.id;
+
+// 	// Post.findById({_id: id}, function(err, post) {
+// 	// 	if (err) console.log(err)
+// 	// })
 	
 
 // 	if(req.body.title) post.title = req.body.title;
 // 	if(req.body.description) post.description = req.body.description;
 // 	if(req.body.location) post.location = req.body.location;
 
-// 	post.save(function(err) {
+// 	post.save(function(err, post) {
 // 		if (err) console.log(err)
-// 		res.redirect('posts')
+// 		res.redirect('/')
 // 	})
 // }
 
@@ -122,7 +136,13 @@ module.exports = {
 	index: index,
 	show: show,
 	newPost: newPost,
+<<<<<<< HEAD
 	create: create,
 	editPost: editPost,
 	removePost: removePost
+=======
+	create: create
+	// editPost: editPost,
+	// update: update
+>>>>>>> 0fb255bebd760bfaddb8891be64c618719c64a06
 }

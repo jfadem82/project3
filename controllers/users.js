@@ -1,62 +1,56 @@
 var passport = require("passport")
 
-// GET /signup
-function getSignup(request, response) {
-  response.render('signup.ejs', { message: request.flash('signupMessage') });
+function getSignup (req, res) {
+  res.render('signup.ejs', { message: req.flash ('signupMessage') });
 }
 
-// POST /signup
-function postSignup(request, response) {
-  var signupStrategy = passport.authenticate('local-signup', {
+function postSignup (req, res) {
+  var signupStrategy = passport.authenticate ('local-signup', {
     successRedirect : '/',
     failureRedirect : '/signup',
     failureFlash : true
   });
 
-  return signupStrategy(request, response);
+  return signupStrategy (req, res);
 }
 
-// GET /login
-function getLogin(request, response) {
-    response.render('login.ejs', { message: request.flash('loginMessage') });
+function getLogin (req, res) {
+    res.render('login.ejs', { message: req.flash ('loginMessage')});
 }
 
-// POST /login
-function postLogin(request, response) {
-    var loginProperty = passport.authenticate('local-login', {
+function postLogin (req, res) {
+  var loginProperty = passport.authenticate ('local-login', {
     successRedirect : '/',
     failureRedirect : '/login',
     failureFlash : true
 });
 
-    return loginProperty(request, response);
+  return loginProperty (req, res);
   }
 
-function getFacebook(request, response) {
-   var signupStrategy = passport.authenticate('facebook', {
+function getFacebook (req, res) {
+  var signupStrategy = passport.authenticate ('facebook', {
      scope : 'email'
-   });
+  });
 
-   return signupStrategy(request, response);
+  return signupStrategy (req, res);
  }
 
-function getFacebookCallback(request, response) {
-   var loginProperty = passport.authenticate('facebook', {
-     successRedirect : '/secret',
-     failureRedirect : '/login'
-   });
+function getFacebookCallback (req, res) {
+  var loginProperty = passport.authenticate ('facebook', {
+    successRedirect : '/',
+    failureRedirect : '/login'
+  });
 
-   return loginProperty(request, response);
- }
-
-// GET /logout
-function getLogout(request, response) {
-  request.logout();
-  response.redirect('/');
+  return loginProperty (req, res);
 }
 
-// Restricted page
-function secret(request, response){
+function getLogout(req, res) {
+  req.logout();
+  res.redirect('/');
+}
+
+function secret(req, res){
 	response.render('secret.ejs');
 }
 

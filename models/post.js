@@ -1,11 +1,11 @@
-var mongoose = require('mongoose')
-	User = require("./user");
+var mongoose 	= require('mongoose');
+var User 			= require("./user");
 
-var postSchema = new mongoose.Schema( {
-	title: String,
-	description: String,
-	location: String,
-	user: {type: mongoose.Schema.ObjectId, ref: 'User'}
+var postSchema = new mongoose.Schema ( {
+	title		: String,
+	description	: String,
+	location	: String,
+	User 		: {type: mongoose.Schema.ObjectId, ref: 'User'}
 })
 
 var Post = mongoose.model('Post', postSchema);

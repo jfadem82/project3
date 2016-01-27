@@ -43,10 +43,11 @@ function removePost (req, res) {
 	})
 }
 
+
 module.exports = {
 	index: index,
 	show: show,
 	newPost: newPost,
 	create: create,
-	removePost: removePost
+	removePost: removePost,
 }

@@ -44,4 +44,6 @@ router.route('/posts/:id')
   .get(authenticatedUser, postsController.show)
 
 
+
+
 module.exports = router

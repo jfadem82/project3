@@ -11,7 +11,7 @@ function postSignup (req, res) {
     failureFlash : true
   });
 
-  return signupStrategy (req, resp);
+  return signupStrategy (req, res);
 }
 
 function getLogin (req, res) {

@@ -23,10 +23,10 @@ function newPost (req, res) {
 function create (req, res) {
 	var post = new Post();
 	
-	post.title 				= req.body.title;
+	post.title 			= req.body.title;z
 	post.description 	= req.body.description;
 	post.location 		= req.body.location;
-	post.user 				= req.user._id; 
+	post.user 			= req.user._id; 
 
 	post.save(function(err, post) {
 		if (err) console.log(err);

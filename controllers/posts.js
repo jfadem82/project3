@@ -68,9 +68,9 @@ function updatePost (req, res) {
 
 		post.save(function(error) {
 			if(error) {
-				res.send("could not update post bc" + error)
+				console.log("could not update post bc" + error)
 			}
-			res.json(post)
+			res.redirect('/')
 		})
 	})
 }

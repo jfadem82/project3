@@ -1,4 +1,5 @@
 /node_modules
 /couches/*.jpg
 /couches/*.png
+keys.txt
 /config/auth.js

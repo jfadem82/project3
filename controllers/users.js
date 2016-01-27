@@ -14,7 +14,7 @@ function postSignup (req, res) {
   return signupStrategy (req, resp);
 }
 
-function getLogin (req, resp) {
+function getLogin (req, res) {
     res.render('login.ejs', { message: req.flash ('loginMessage')});
 }
 

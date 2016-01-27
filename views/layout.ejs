@@ -6,11 +6,11 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
     </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"> </script>
   </head>
   <body>
     <nav class="navbar navbar-default">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
@@ -20,21 +20,17 @@
           </button>
           <a class="navbar-brand" href="/">Show Me Your Junk™</a>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="user-menu">
           <ul class="nav navbar-nav">
             <% if (user) { %>
               <li><a href="/logout">Logout</a></li<a>
             <% } else { %>
-                <li><a href="/login">Log in</a></li>
-                <li><a href="/signup">Sign up</a></li>
-                
-              <% } %>
-            <!-- <li><a href="/secret">Secret page (only if authenticated)</a></li> -->
+              <li><a href="/login">Log in</a></li>
+              <li><a href="/signup">Sign up</a></li>
+            <% } %>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+        </div>
+      </div>
     </nav>
 
     <main class="container">

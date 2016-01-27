@@ -14,6 +14,9 @@ apiRoutes.route('/api')
 apiRoutes.route('/api/new')
 	.post(apiController.newPost)
 
+apiRoutes.route('/api/:id')
+	.delete(apiController.removePost)
+
 
 
 module.exports = apiRoutes

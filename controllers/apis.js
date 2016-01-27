@@ -24,8 +24,18 @@ function newPost (req, res) {
 	})
 }
 
+function removePost (req, res) {
+	var id = req.params.id
+
+	Post.remove({_id: id}, function(error) {
+		if(error) res.json({message: 'Could not delete post b/c' + error});
+
+		res.json({message: 'Post succesfully deleted'})
+	})
+}
 
 module.exports = { 
 	index: index,
-	newPost: newPost
+	newPost: newPost,
+	removePost: removePost
 }

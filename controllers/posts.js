@@ -43,10 +43,45 @@ function removePost (req, res) {
 	})
 }
 
+function editPost (req, res) {
+	var id = req.params.id
+
+	Post.findById(id, function(error, post) {
+		if(error) { console.log(error) }
+		res.render('editpost.ejs', {post: post})
+	})
+}
+
+function updatePost (req, res) {
+	var id = req.params.id
+
+	Post.findById(id, function(error, post) {
+		if(error) {
+			res.send('Could not find post b/c' + error);
+		}
+		console.log('put request received ')
+		console.log(post)
+
+		post.title = req.body.title;
+		post.description = req.body.description;
+		post.location = req.body.location;
+
+		post.save(function(error) {
+			if(error) {
+				console.log("could not update post bc" + error)
+			}
+			res.redirect('/')
+		})
+	})
+}
+
+
 module.exports = {
 	index: index,
 	show: show,
 	newPost: newPost,
 	create: create,
-	removePost: removePost
+	removePost: removePost,
+	editPost: editPost,
+	updatePost: updatePost
 }

@@ -16,6 +16,9 @@ apiRoutes.route('/api/new')
 
 apiRoutes.route('/api/:id')
 	.delete(apiController.removePost)
+	.put(apiController.updatePost)
+
+
 
 
 

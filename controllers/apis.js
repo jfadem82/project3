@@ -24,6 +24,7 @@ function newPost (req, res) {
 	})
 }
 
+
 function removePost (req, res) {
 	var id = req.params.id
 
@@ -34,8 +35,33 @@ function removePost (req, res) {
 	})
 }
 
+function updatePost (req, res) {
+	var id = req.params.id
+
+	Post.findById(id, function(error, post) {
+		if(error) {
+			res.send('Could not find post b/c' + error);
+		}
+		console.log('put request received ')
+		console.log(post)
+
+		post.title = req.body.title;
+		post.description = req.body.description;
+		post.location = req.body.location;
+
+		post.save(function(error) {
+			if(error) {
+				res.send("could not update post bc" + error)
+			}
+			res.json(post)
+		})
+	})
+}
+
+
 module.exports = { 
 	index: index,
 	newPost: newPost,
-	removePost: removePost
+	removePost: removePost,
+	updatePost: updatePost
 }

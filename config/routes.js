@@ -42,7 +42,10 @@ router.route('/posts/new')
 router.route('/posts/:id')
   .delete(authenticatedUser, postsController.removePost)
   .get(authenticatedUser, postsController.show)
+  .put(authenticatedUser, postsController.updatePost)
 
+router.route('/posts/:id/edit')
+  .get(authenticatedUser, postsController.editPost)
 
 
 

@@ -35,7 +35,7 @@ router.route('/auth/facebook/callback')
 router.route('/')
   .get(postsController.index)
 
-router.route('/userposts')
+router.route('/myposts')
   .get(postsController.userposts)
 
 router.route('/posts/new')
@@ -44,7 +44,7 @@ router.route('/posts/new')
 
 router.route('/posts/:id')
   .delete(authenticatedUser, postsController.removePost)
-  .get(authenticatedUser, postsController.show)
+  .get(postsController.show)
   .put(authenticatedUser, postsController.updatePost)
 
 router.route('/posts/:id/edit')

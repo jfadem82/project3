@@ -83,9 +83,13 @@ h2 {
 
 }
 
-.signup, .login, .edit-post, .new-post {
+.signup, .login, .edit-post, .new-post, .my-posts {
 	font-family: 'Oswald', sans-serif;
 	margin-bottom: 30px;
+}
+
+.my-posts {
+	text-align: center;
 }
 
 .title {

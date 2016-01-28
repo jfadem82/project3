@@ -1,11 +1,17 @@
-<p> HEY IM NODEMON</p>
-
-
-
-<ul>
-	<% for(var i=0; i < posts.length; i++) { %>
-			<li><b>Title: </b> <a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a>
+<div class="my-posts">
+	<h2>My Posts</h2>
+	<ul class="index">
+		<div class="row">
+			<% for(var i=0; i < posts.length; i++) { %>
+				<div class="col-sm-6 col-md-3">
+					<li class="posting"><a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a>
+					
+		    </li>
+		    <li><a href="/posts/<%= posts[i].id %>/edit" class="glyphicon glyphicon-pencil"></a>
+						<div class ="glyphicon glyphicon-trash nodemon delete" id="<%= posts[i].id %>"></div>
+				</li>
 				</div>
-	    </li>
-	<% } %>
-</ul>
+			<% } %>
+		</div>
+	</ul>
+</div>

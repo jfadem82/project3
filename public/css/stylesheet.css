@@ -139,3 +139,11 @@ h2 {
 .delete {
 	display: inline-block;
 }
+
+.smaller img {
+	width: 50%;
+}
+
+.smaller2 img {
+	width: 100%;
+}

@@ -17,7 +17,7 @@ function show (req, res) {
 }
 
 function newPost (req, res) {
-	res.render('newpost.ejs')
+	res.render('newpost.ejs')		
 }
 
 function create (req, res) {
@@ -28,8 +28,10 @@ function create (req, res) {
 	post.title 			= req.body.title;
 	post.description 	= req.body.description;
 	post.location 		= req.body.location;
+
 	post.user 			= req.user._id; 
 	post.avatar_url		= req.body.avatar_url
+
 	post.save(function(err, post) {
 		if (err) console.log(err);
 		res.redirect('/')
@@ -47,7 +49,7 @@ function removePost (req, res) {
 
 function editPost (req, res) {
 	var id = req.params.id
-
+console.log('hello from edit nodemon')
 	Post.findById(id, function(error, post) {
 		if(error) { console.log(error) }
 		res.render('editpost.ejs', {post: post})
@@ -56,6 +58,7 @@ function editPost (req, res) {
 
 function updatePost (req, res) {
 	var id = req.params.id
+	console.log('hello from update nodemon')
 
 	Post.findById(id, function(error, post) {
 		if(error) {

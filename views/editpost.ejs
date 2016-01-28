@@ -14,4 +14,9 @@
     <input class="form-control" type="address" name="location" id="location" value="<%=post.location%>">
   </div>
   <button class="btn btn-primary" type="submit" id="update_post">UPDATE</button> 
+  <% if (user) {%>
+    <% if (post.user.toString() === user._id.toString()) { %>    
+      <div class="btn btn-danger nodemon" id="<%= post.id %>"></div>
+    <% } %>
+  <% } %>
 </form>

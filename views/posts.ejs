@@ -5,7 +5,7 @@
 			<div class="col-sm-6 col-md-3">
 				<li class="posting"><a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a>
 	    		</li>
-	    		<li><a href="/posts/<%= posts[i].id %>">IMAGE HERE</a></li>
+	    		<li class="img-responsive"><a href="/posts/<%= posts[i].id %>"><img src="<%= posts[i].avatar_url %>"></a></li>
 	    		<li id="location-index"><%= posts[i].location %></li>
 	    	</div>
 	    	<li></li>

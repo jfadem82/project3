@@ -18,6 +18,10 @@ var mongoUri     	= process.env.MONGOLAB_URI || 'mongodb://localhost/project3'
 
 mongoose.connect(mongoUri); 
 
+// var modalManager = $("body").data("modalmanager");
+// var openModals = modalManager.getOpenModals();
+// modalManager.removeLoading();
+
 app.use(morgan('dev')); 
 app.use(cookieParser());
 app.use(bodyParser.json())

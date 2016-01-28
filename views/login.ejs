@@ -1,18 +1,22 @@
-<h2>Login</h2>
-<% if (message.length > 0) { %>
-  <div class="alert alert-danger"><%= message %></div>
-<% } %>
-<form method="post" action="/login">
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input class="form-control" type="text" name="email" id="email">
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input class="form-control" type="password" name="password" id="password">
-  </div>
-  <input class="btn btn-primary" type="submit">
-</form>
-<br><hr>
-<h2>Login/Register with Facebook:</h2>
-  <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span>Facebook</a>
+<div class="box">
+<div class="login jumbotron">
+  <h2>Login</h2>
+  <% if (message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div>
+  <% } %>
+  <form method="post" action="/login">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input class="form-control" type="text" name="email" id="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control" type="password" name="password" id="password">
+    </div>
+    <input class="btn btn-primary" type="submit">
+  </form>
+  <br><hr>
+  <h2>Login/Register with Facebook:</h2>
+    <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span>Facebook</a>
+</div>
+</div>

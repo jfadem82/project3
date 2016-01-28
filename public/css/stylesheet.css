@@ -1,0 +1,153 @@
+.navbar-brand {
+	font-family: 'Bangers', cursive;
+	font-size: 28px;
+	color: white;
+}
+
+.navbar-default {
+	background-color: #005ca4;
+	border: none;
+	border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-nav li a:link, .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:visited {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+#main-body {
+	padding-top: 20px;
+}
+
+.img-responsive {
+	margin-top: 50px;
+	z-index: 1;
+	position: static;
+}
+
+.row {
+	list-style: none;
+	font-family: 'Oswald', sans-serif;
+	text-decoration: none;
+	color: 000;
+	font-size: 26px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.row a:link, .row a:hover, .row a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+#location-index {
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+}
+
+h1 {
+	font-family: 'Bangers', cursive;
+	margin-top: -100px;
+	text-align: center;
+	font-size: 150px;
+	color: #005ca4;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: white;
+}
+
+.info {
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	text-align: center;
+	margin-top: -20px;
+	margin-bottom: 30px;
+}
+
+.show-page {
+	list-style: none;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+}
+
+.jumbotron {
+	margin-top: -600px;
+	/*color: #ffffff;*/
+	z-index: 9999;
+	font-family: 'Oswald', sans-serif;
+	position: absolute;
+	width: 600px;
+	margin-left: 300px;
+	height: 400px;
+	padding-top: -78px;
+	padding-bottom: -78px;
+	opacity: 0.6;
+}
+
+
+
+.box {
+	position: absolute;
+		padding-top: -78px;
+	padding-bottom: -78px;
+	z-index: 9999;
+}
+
+.form-group {
+	opacity: 1.0;
+}
+
+h2 {
+	margin-top: -20px;
+
+}
+
+
+.signup {
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 30px;
+}
+
+.title {
+	font-size: 46px;
+	margin-bottom: 10px;
+}
+
+.located-at {
+	margin-top: 20px;
+	font-size: 26px;
+}
+
+.user {
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+.index {
+	margin-bottom: 30px;
+}
+
+.btn .btn-primary {
+	color: white;
+}
+
+.copyright {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	widows: auto;
+	height: 100%;
+	padding: 15px 0;
+	color: white;
+}
+
+.navbar .navbar-default .navbar-bottom .container {
+	margin-bottom: -20px;
+}
+
+.posting {
+	margin-top: 30px;
+}

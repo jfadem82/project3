@@ -1,7 +1,20 @@
-<ul>
-	<li><b>Title: </b><%= post.title %></li>
-	<li><b>Description </b><%= post.description %></li>
-	<li><b>Location </b><%= post.location %></li>
-	<li> <img src="<%= post.avatar_url %>"></li>
-	<li><b>By: </b><%= post.user %></li>
+
+<ul class="show-page">
+	<li class="title"><%= post.title %></li>
+	<li class="image"><img src="<%= post.avatar_url %></li>
+	<li class="located-at"><b>Address: </b><%= post.location %></li>
+	<li class="user"><%= post.description %></li>
+	<li class="user"><b>By: </b><%= post.user %></li>
+	<li>
+		<div
+		  class="fb-like"
+		  data-share="true"
+		  data-width="450"
+		  data-show-faces="true">
+		</div>
+	</li>
+	<li>
+		<div class="fb-comments" data-href="http://localhost:3000/posts/<%= post.id %>" data-numposts="5"></div>
+	</li>
+
 </ul>

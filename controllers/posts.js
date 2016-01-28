@@ -28,14 +28,13 @@ function create (req, res) {
 	post.title 			= req.body.title;
 	post.description 	= req.body.description;
 	post.location 		= req.body.location;
-
 	post.user 			= req.user._id; 
 	post.avatar_url		= req.body.avatar_url
 
 	post.save(function(err, post) {
-		if (err) console.log(err);
-		res.redirect('/')
-	});
+		if (err) console.log(err)
+		res.redirect('/' )
+	})
 }
 
 function removePost (req, res) {

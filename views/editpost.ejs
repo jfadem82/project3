@@ -1,5 +1,5 @@
 <h2>Edit Post</h2>
-<form method="put" action="/posts/<%=post._id%>/edit">
+<form method="post" action="/posts/<%=post._id%>">
 <input type="hidden" name="_method" value="put">
   <div class="form-group">
     <label>Title</label>
@@ -7,11 +7,11 @@
   </div>
   <div class="form-group">
     <label>Description</label>
-    <input class="form-control" type="text" name="description" id="description">
+    <input class="form-control" type="text" name="description" id="description" placeholder="<%=post.description%>">
   </div>
   <div class="form-group">
     <label>Location</label>
-    <input class="form-control" type="address" name="location" id="location">
+    <input class="form-control" type="address" name="location" id="location" placeholder="<%=post.location%>">
   </div>
   <button class="btn btn-primary" type="submit" id="update_post">UPDATE</button> 
 </form>

@@ -15,12 +15,12 @@
   </div>
   <button class="btn btn-primary" type="submit" id="update_post">UPDATE</button> 
   <button>
-        <% if (user) {%>
-        <% if (post.user.toString() === user._id.toString()) { %>
+    <% if (user) {%>
+      <% if (post.user.toString() === user._id.toString()) { %>
         <div class ="btn btn-danger nodemon" id="<%= post.id %>">DELETE</div>
-        <% } %>
-        <% } %>
-          </button>
+      <% } %>
+    <% } %>
+  </button>
 </form>
 
 <script type="text/javascript">

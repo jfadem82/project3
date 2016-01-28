@@ -6,7 +6,7 @@ var postSchema 	= new mongoose.Schema ( {
 	description	: String,
 	location	: String,
 	avatar_url	: String,
-	User 		: {type: mongoose.Schema.ObjectId, ref: 'User'}
+	user 		: {type: mongoose.Schema.ObjectId, ref: 'User'}
 })
 
 var Post = mongoose.model('Post', postSchema);

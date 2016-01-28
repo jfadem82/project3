@@ -16,7 +16,8 @@ function newPost (req, res) {
 
 	post.title = req.body.title;
 	post.description = req.body.description;
-	post.location = req.body.location
+	post.location = req.body.location;
+	post.avatar_url		= req.body.avatar_url
 
 	post.save(function(err, post) {
 		if(err) console.log(err)
@@ -48,6 +49,7 @@ function updatePost (req, res) {
 		post.title = req.body.title;
 		post.description = req.body.description;
 		post.location = req.body.location;
+		post.avatar_url		= req.body.avatar_url
 
 		post.save(function(error) {
 			if(error) {

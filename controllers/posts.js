@@ -48,7 +48,7 @@ function removePost (req, res) {
 
 function editPost (req, res) {
 	var id = req.params.id
-
+console.log('hello from edit nodemon')
 	Post.findById(id, function(error, post) {
 		if(error) { console.log(error) }
 		res.render('editpost.ejs', {post: post})
@@ -57,6 +57,7 @@ function editPost (req, res) {
 
 function updatePost (req, res) {
 	var id = req.params.id
+	console.log('hello from update nodemon')
 
 	Post.findById(id, function(error, post) {
 		if(error) {

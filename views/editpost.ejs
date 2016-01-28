@@ -1,5 +1,6 @@
 <h2>Edit Post</h2>
-<form method="patch" action="/update">
+<form method="put" action="/posts/<%=post._id%>/edit">
+<input type="hidden" name="_method" value="put">
   <div class="form-group">
     <label>Title</label>
     <input class="form-control" type="text" name="title" id="title" placeholder="<%=post.title%>">

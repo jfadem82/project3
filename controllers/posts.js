@@ -17,7 +17,7 @@ function show (req, res) {
 }
 
 function newPost (req, res) {
-	res.render('newpost.ejs')
+	res.render('newpost.ejs')		
 }
 
 function create (req, res) {
@@ -26,6 +26,7 @@ function create (req, res) {
 	post.title 				= req.body.title;
 	post.description 	= req.body.description;
 	post.location 		= req.body.location;
+	post.photo			= req.body.preview;
 	post.user 				= req.user._id; 
 
 	post.save(function(err, post) {

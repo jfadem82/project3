@@ -3,7 +3,12 @@
 <ul>
 	<% for(var i=0; i < posts.length; i++) { %>
 			<li><b>Title: </b> <a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a>
+			<% if (user) {%>
+			<% if (posts[i].user.toString() === user._id.toString()) { %>
+			
 				<div class="btn btn-danger nodemon" id="<%= posts[i].id %>"></div>
+			<% } %>
+			<% } %>
 	    </li>
 	<% } %>
 </ul>

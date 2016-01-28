@@ -21,7 +21,8 @@ function newPost (req, res) {
 }
 
 function create (req, res) {
-	console.log(req.body)
+	console.log('req.body', req.body)
+	console.log('req.user', req.user)
 	var post = new Post();
 	
 	post.title 			= req.body.title;

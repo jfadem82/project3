@@ -1,10 +1,8 @@
-
 <ul class="show-page">
 	<li class="title"><%= post.title %></li>
-	<li class="image"><img src="<%= post.avatar_url %>"</li>
+	<li class="img-responsive"><img src="<%= post.avatar_url %>"></li>
 	<li class="located-at"><b>Address: </b><%= post.location %></li>
 	<li class="user"><%= post.description %></li>
-	<li class="user"><b>By: </b><%= post.user %></li>
 	<li>
 		<div
 		  class="fb-like"
@@ -16,5 +14,4 @@
 	<li>
 		<div class="fb-comments" data-href="https://show-me-your-junk.herokuapp.com/posts/<%= post.id %>" data-numposts="5"></div>
 	</li>
-
 </ul>

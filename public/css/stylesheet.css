@@ -74,24 +74,38 @@ h1 {
 	font-family: 'Oswald', sans-serif;
 }
 
-.container .jumbotron {
-	margin-top: -650px;
-	color: #ffffff;
+.jumbotron {
+	margin-top: -600px;
+	/*color: #ffffff;*/
 	z-index: 9999;
 	font-family: 'Oswald', sans-serif;
+	position: absolute;
+	width: 600px;
+	margin-left: 300px;
+	height: 400px;
+	padding-top: -78px;
+	padding-bottom: -78px;
+	opacity: 0.6;
 }
 
+
+
 .box {
-	background-color: white;
-	width: 500px;
+	position: absolute;
+		padding-top: -78px;
+	padding-bottom: -78px;
 	z-index: 9999;
 }
 
 .form-group {
-	background-color: #ffffff;
-	z-index: 9999;
-	font-family: 'Oswald', sans-serif;
+	opacity: 1.0;
 }
+
+h2 {
+	margin-top: -20px;
+
+}
+
 
 .signup {
 	font-family: 'Oswald', sans-serif;

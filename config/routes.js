@@ -35,6 +35,9 @@ router.route('/auth/facebook/callback')
 router.route('/')
   .get(postsController.index)
 
+router.route('/userposts')
+  .get(postsController.userposts)
+
 router.route('/posts/new')
   .get(authenticatedUser, postsController.newPost)
   .post(postsController.create)

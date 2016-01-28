@@ -7,6 +7,15 @@ function index (req, res) {
 	});
 }
 
+function userposts (req, res) {
+	var userID = req.user._id
+	console.log(req.user._id)
+	Post.find({user: userID}, function(error, posts) {
+		if(error) throw error
+		res.render('userposts.ejs', {posts: posts});
+	})
+}
+
 function show (req, res) {
 	var id = req.params.id;
 
@@ -82,6 +91,7 @@ function updatePost (req, res) {
 
 module.exports = {
 	index: index,
+	userposts: userposts,
 	show: show,
 	newPost: newPost,
 	create: create,

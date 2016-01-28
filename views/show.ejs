@@ -1,13 +1,17 @@
 <ul>
-	<li><b>Title: </b><%= post.title %></li>
-	<li><b>By: </b><%= post.user %></li>
-<li>
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div></li>
-<li>
-<div class="fb-comments" data-href="http://localhost:3000/posts/<% post.id %>" data-numposts="5"></div></li>
+	<li class="show-page"><%= post.title %></li>
+	<li class="show-page">IMAGE HERE</li>
+	<li class="show-page"><%= post.location %></li>
+	<li class="show-page"><b>By: </b><%= post.user %></li>
+	<li class="show-page">
+		<div
+		  class="fb-like"
+		  data-share="true"
+		  data-width="450"
+		  data-show-faces="true">
+		</div>
+	</li>
+	<li class="show-page">
+		<div class="fb-comments" data-href="http://localhost:3000/posts/<% post.id %>" data-numposts="5"></div>
+	</li>
 </ul>

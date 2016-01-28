@@ -1,9 +1,9 @@
-<p>Show Me Your Junk attempts to solve the problem of unwanted furniture going straight to the dump by listing any item you don't want here.<br>All items on this site are free and left as-is. <br>No more driving around hoping to find that perfect vintage couch. <br>No more calling the city to have them discard your now useless dresser. <br>Help keep your city clean and help the environment while gaining free stuff. What could be better. <br>So come on...show us your junk!</p>
+<p class="info">Show Me Your Junk attempts to solve the problem of unwanted furniture going straight to the dump by listing any item you don't want here.<br>All items on this site are free and left as-is. <br>No more driving around hoping to find that perfect vintage couch. <br>No more calling the city to have them discard your now useless dresser. <br>Help keep your city clean and help the environment while gaining free stuff. What could be better. <br>So come on...show us your junk!</p>
 <ul class="index">
 	<div class="row">
 		<% for(var i=0; i < posts.length; i++) { %>
 			<div class="col-sm-6 col-md-3">
-				<li><a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a>
+				<li class="posting"><a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a>
 	    		</li>
 	    		<li><a href="/posts/<%= posts[i].id %>">IMAGE HERE</a></li>
 	    		<li id="location-index"><%= posts[i].location %></li>

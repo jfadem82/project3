@@ -14,21 +14,18 @@
 	color: white;
 }
 
-.navbar-default .navbar-nav li a {
+.navbar-default .navbar-nav li a:link, .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:visited {
 	color: white;
 	font-family: 'Oswald', sans-serif;
 }
 
-.navbar-default .navbar-nav li a:hover {
-	color: white;
-}
 
 #main-body {
 	padding-top: 20px;
 }
 
 .img-responsive {
-	margin-top: -20px;
+	margin-top: 50px;
 	z-index: 1;
 	position: static;
 }
@@ -43,7 +40,7 @@
 	padding-bottom: 30px;
 }
 
-a:link, a:hover, a:visited {
+.row a:link, .row a:hover, .row a:visited {
 	color: black;
 	text-decoration: none;
 }
@@ -63,7 +60,7 @@ h1 {
 	-webkit-text-stroke-color: white;
 }
 
-p {
+.info {
 	font-family: 'Oswald', sans-serif;
 	font-size: 18px;
 	text-align: center;
@@ -96,6 +93,11 @@ p {
 	font-family: 'Oswald', sans-serif;
 }
 
+.signup {
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 30px;
+}
+
 .title {
 	font-size: 46px;
 	margin-bottom: 10px;
@@ -113,4 +115,25 @@ p {
 
 .index {
 	margin-bottom: 30px;
+}
+
+.btn .btn-primary {
+	color: white;
+}
+
+.copyright {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	widows: auto;
+	height: 100%;
+	padding: 15px 0;
+	color: white;
+}
+
+.navbar .navbar-default .navbar-bottom .container {
+	margin-bottom: -20px;
+}
+
+.posting {
+	margin-top: 30px;
 }

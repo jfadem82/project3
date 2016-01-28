@@ -21,13 +21,14 @@ function newPost (req, res) {
 }
 
 function create (req, res) {
+	console.log(req.body)
 	var post = new Post();
 	
 	post.title 			= req.body.title;
 	post.description 	= req.body.description;
 	post.location 		= req.body.location;
 	post.user 			= req.user._id; 
-
+	post.avatar_url		= req.body.avatar_url
 	post.save(function(err, post) {
 		if (err) console.log(err);
 		res.redirect('/')

@@ -4,6 +4,11 @@
 		<% for(var i=0; i < posts.length; i++) { %>
 			<div class="col-sm-6 col-md-3">
 				<li class="posting"><a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a>
+				<% if (user) {%>
+				<% if (posts[i].user.toString() === user._id.toString()) { %>
+						<div class ="btn btn-danger nodemon" id="<%= posts[i].id %>"></div>
+				<% } %>
+				<% } %>
 	    		</li>
 	    		<li><a href="/posts/<%= posts[i].id %>">IMAGE HERE</a></li>
 	    		<li id="location-index"><%= posts[i].location %></li>

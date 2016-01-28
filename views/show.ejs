@@ -1,4 +1,13 @@
 <ul>
 	<li><b>Title: </b><%= post.title %></li>
 	<li><b>By: </b><%= post.user %></li>
+<li>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div></li>
+<li>
+<div class="fb-comments" data-href="http://localhost:3000/posts/<% post.id %>" data-numposts="5"></div></li>
 </ul>

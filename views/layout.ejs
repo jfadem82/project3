@@ -15,15 +15,14 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"> </script>
   </head>
   <body>
-<div id="fb-root"></div>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=636535653151672";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=636535653151672";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -38,7 +37,9 @@
         <div class="collapse navbar-collapse" id="user-menu">
           <ul class="nav navbar-nav">
             <% if (user) { %>
-              <li><a href="/logout">Logout</a></li<a>
+              <li><a href="/posts/new">Add Post</a></li></a>
+              <li><a href="/myposts">My Posts</a></li></a>
+              <li><a href="/logout">Logout</a></li></a>
             <% } else { %>
               <li><a href="/login">Log in</a></li>
               <li><a href="/signup">Sign up</a></li>
@@ -55,11 +56,11 @@
     </main>
 
     <nav class="navbar navbar-default navbar-bottom">
-  <div class="container">
-    <a class="navbar-brand" href="/">Show Me Your Junk</a>
-    <p class="copyright">@2016 Nodemon Inc.</p>
-  </div>
-</nav>
+      <div class="container">
+        <a class="navbar-brand" href="/">Show Me Your Junk</a>
+        <p class="copyright">@2016 Nodemon Inc.</p>
+      </div>
+    </nav>
   
   </body>
 </html>

@@ -38,11 +38,14 @@ function create (req, res) {
 	post.description 	= req.body.description;
 	post.location 		= req.body.location;
 	post.user 			= req.user._id; 
-	post.avatar_url		= req.body.avatar_url
+	post.avatar_url		= req.body.avatar_url;
+	post.latitude		= req.body.latitude;
+	post.longitude		= req.body.longitude;
 
 	post.save(function(err, post) {
 		if (err) console.log(err)
-		res.redirect('/' )
+		// res.redirect('/' )
+		res.json({message: "Successfully 'posted', sort of...", success: true, postId: post._id})
 	})
 }
 

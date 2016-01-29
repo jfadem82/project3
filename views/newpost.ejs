@@ -34,27 +34,33 @@
         $.ajax( {
           method: 'GET',
             url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address
-}).then(function(res){
-  console.log(res)
-  document.getElementById('latitude').value =  res.results[0].geometry.location.lat
-  document.getElementById('longitude').value = res.results[0].geometry.location.lng
-  console.log(latitude)
-  console.log(longitude)
-  $.ajax( {
-    method: 'Post',
-    url: '/posts/new',
-    data: {
-      title: $('#title').val(),
-      description: $('#description').val(),
-      avatar_url: $('#avatar_url').val(),
-      location: $('#location').val(),
-      latitude: res.results[0].geometry.location.lat,
-      longitude: res.results[0].geometry.location.lng
-    }
-  })
-  // return true;
-    });
-})
+        }).then(function(res){
+          console.log(res)
+          document.getElementById('latitude').value =  res.results[0].geometry.location.lat
+          document.getElementById('longitude').value = res.results[0].geometry.location.lng
+          /*console.log(latitude)
+          console.log(longitude)*/
+          $.ajax( {
+            method: 'POST',
+            url: '/posts/new',
+            data: {
+              title: $('#title').val(),
+              description: $('#description').val(),
+              avatar_url: $('#avatar_url').val(),
+              location: $('#location').val(),
+              latitude: res.results[0].geometry.location.lat,
+              longitude: res.results[0].geometry.location.lng
+            },
+            success: function(data){
+              if(data.success){
+                console.log("Boom, let's redirect.")
+                window.location.assign('/posts/' + data.postId)
+              }
+            }
+          })
+          // return true;
+        });
+      })
 
   /*
       Function to carry out the actual PUT request to S3 using the signed request from the app.

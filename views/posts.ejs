@@ -7,14 +7,13 @@
 				<li>
 					<% if (user) {%>
 	      		<% if (posts[i].user.toString() === user._id.toString()) { %>
-		      		<a href="/posts/<%= posts[i].id %>/edit" class="glyphicon glyphicon-pencil">
-							</a>
-							<div class ="glyphicon glyphicon-trash nodemon delete" id="<%= posts[i].id %>"></div>
 						<% } %>
 	        <% } %>
 				</li>
-	    	<li class="smaller2"><a href="/posts/<%= posts[i].id %>"><img src="<%= posts[i].avatar_url %>"></a></li>
-
+	    	<li class="smaller2"><a href="/posts/<%= posts[i].id %>"><img src="/images/couch1.jpeg"></a></li>
+	    	<li>
+	    		<a href="/posts/<%= posts[i].id %>/edit" class="glyphicon glyphicon-pencil"></a>
+					<div class ="glyphicon glyphicon-trash nodemon delete" id="<%= posts[i].id %>"></div></li>
 	    </div>
 		<% } %>
 	</div>

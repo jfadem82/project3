@@ -18,7 +18,7 @@
     <div class="delete">
       <% if (user) {%>
         <% if (post.user.toString() === user._id.toString()) { %>
-          <div class ="btn btn-danger nodemon" id="<%= post.id %>">DELETE</div>
+          <button class ="btn btn-danger nodemon" id="<%= post.id %>">DELETE</button>
         <% } %>
       <% } %>
     </div>

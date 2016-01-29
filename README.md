@@ -25,6 +25,9 @@ When signing up, email is required and must be unique or you can login through F
 * MongoDB
 * Ajax
 * Nodemon
+* JavaScript
+* JQuery
+* Bootstrap
 * Node-Modules:
 	* Express 4.13.3
 	* Express Sessions 1.13.0
@@ -56,9 +59,14 @@ If you fork this repo, you must run `npm install` in order for the app to functi
 
 ### Home Page (logged out)
 
+![Landing Page](/assets/header.png)
+
 ![Landing Page](/assets/home_page.png)
 
+### Footer
+
 ![Footer](/assets/footer.png)
+
 
 ######Step 1: Create a profile or login.
 Click Sign Up in Nav button then enter your information in the form or login through Facebook. Once you're logged in you can edit or delete your post.
@@ -66,30 +74,38 @@ Click Sign Up in Nav button then enter your information in the form or login thr
 
 ![Nav Bar Logged Out](/assets/nav-loggedout.png)
 
+### Sign Up
 ![Sign Up Page](/assets/signup.png)
 
+### Login
 ![Login Page](/assets/login.png)
 
+### Navbar Logged In
 ![Nav Bar Logged In](/assets/nav-loggedin.png)
 
+### You Post When Logged In
 ![Post on Home Page Logged In](/assets/post-loggedin.png)
 
 ######Step 2: Check out the items available
 
 You don't need to be logged in to see the items. When you click on a post you get all the info including google maps and facebook comments/likes/shares.
 
+### Post Page
 ![Post Page](/assets/post.png)
 
 ######Step 3: Add/Edit a post
 You must be logged in to add or edit a post and it requires an image and location.
 
+### Add a Post
 ![Add a Post Page](/assets/add-post.png)
 
+### Edit a Post
 ![Edit a Post Page](/assets/edit-post.png)
 
 ######Step 4: My Posts
 If you're logged in you can see all your posts.
 
+### My Posts
 ![My Posts Page](/assets/myposts.png)
 
 ### UX for Project

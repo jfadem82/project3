@@ -28,9 +28,9 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 34.0500, lng: -118.2500},
-    zoom: 10
+    zoom: 8
   });
-var myLatlng = new google.maps.LatLng(latitude, longitude);
+var myLatlng = new google.maps.LatLng(<%= post.latitude %>, <%= post.longitude %>);
 
 var marker = new google.maps.Marker({
     position: myLatlng,

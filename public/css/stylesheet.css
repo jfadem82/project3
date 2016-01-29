@@ -175,3 +175,17 @@ h2 {
 .smaller2 img {
 	width: 100%;
 }
+
+.login, .signup {
+    width: 50%;
+    margin: auto;
+}
+
+#map {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: #005ca4 ;
+    border-width: 3px;
+    border-style: solid;
+}

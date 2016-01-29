@@ -146,6 +146,7 @@ h2 {
 
 .btn-primary {
 	background-color: #52902b;
+	border: none;
 }
 
 .btn-primary:hover {
@@ -157,11 +158,13 @@ h2 {
 }
 
 .facebook {
-	background-color: #9f3439
+	background-color: #9f3439;
+	border: none;
 }
 
 .delete{
 	display: inline-block;
+
 }
 
 .smaller img {

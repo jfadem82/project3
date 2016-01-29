@@ -21,7 +21,7 @@ function show (req, res) {
 
 	Post.findById({_id: id}, function (err, post) {
 		if (err) console.log(err);
-		res.render('./show.ejs', {post: post});
+		res.render('show.ejs', {post: post});
 	});
 }
 
@@ -57,7 +57,6 @@ function removePost (req, res) {
 
 function editPost (req, res) {
 	var id = req.params.id
-console.log('hello from edit nodemon')
 	Post.findById(id, function(error, post) {
 		if(error) { console.log(error) }
 		res.render('editpost.ejs', {post: post})
@@ -66,7 +65,6 @@ console.log('hello from edit nodemon')
 
 function updatePost (req, res) {
 	var id = req.params.id
-	console.log('hello from update nodemon')
 
 	Post.findById(id, function(error, post) {
 		if(error) {

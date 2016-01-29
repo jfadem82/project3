@@ -1,7 +1,7 @@
 var Post = require('../models/post.js')
 
 function index (req, res) {
-	Post.find({}, function (err, posts) {
+	Post.find({}).sort({time: -1}).exec( function (err, posts) {
 		if (err) console.log(err);
 		res.render('posts.ejs', {posts: posts});
 	});
@@ -38,7 +38,8 @@ function create (req, res) {
 	post.description 	= req.body.description;
 	post.location 		= req.body.location;
 	post.user 			= req.user._id; 
-	post.avatar_url		= req.body.avatar_url
+	post.avatar_url		= req.body.avatar_url;
+	post.time 			= Date.now();
 
 	post.save(function(err, post) {
 		if (err) console.log(err)

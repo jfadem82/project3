@@ -23,7 +23,6 @@
 	font-family: 'Oswald', sans-serif;
 }
 
-
 #main-body {
 	padding-top: 20px;
 }
@@ -146,6 +145,7 @@ h2 {
 
 .btn-primary {
 	background-color: #52902b;
+	border: none;
 }
 
 .btn-primary:hover {
@@ -157,11 +157,14 @@ h2 {
 }
 
 .facebook {
-	background-color: #9f3439
+	background-color: #9f3439;
+	border: none;
 }
 
 .delete{
 	display: inline-block;
+	color: red;
+
 }
 
 .smaller img {
@@ -170,4 +173,18 @@ h2 {
 
 .smaller2 img {
 	width: 100%;
+}
+
+.login, .signup {
+	width: 50%;
+	margin: auto;
+}
+
+#map {
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-color: #005ca4;
+	border-width: 3px;
+	border-style: solid;
 }

@@ -23,9 +23,6 @@ router.route('/login')
 router.route('/logout')
   .get(usersController.getLogout)
 
-router.route('/secret')
-  .get(usersController.secret)
-
 router.route('/auth/facebook')
   .get(usersController.getFacebook)
 
@@ -49,7 +46,5 @@ router.route('/posts/:id')
 
 router.route('/posts/:id/edit')
   .get(authenticatedUser, postsController.editPost)
-  
-
 
 module.exports = router

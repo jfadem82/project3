@@ -23,7 +23,6 @@
 	font-family: 'Oswald', sans-serif;
 }
 
-
 #main-body {
 	padding-top: 20px;
 }
@@ -164,6 +163,7 @@ h2 {
 
 .delete{
 	display: inline-block;
+	color: red;
 
 }
 
@@ -182,4 +182,9 @@ h2 {
 
 #map {
 	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-color: #005ca4;
+	border-width: 3px;
+	border-style: solid;
 }

@@ -18,8 +18,4 @@ apiRoutes.route('/api/:id')
 	.delete(apiController.removePost)
 	.put(apiController.updatePost)
 
-
-
-
-
 module.exports = apiRoutes

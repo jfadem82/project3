@@ -9,7 +9,7 @@
 	    		<% if (user) {%>
 	      		<% if (posts[i].user.toString() === user._id.toString()) { %>
 			    		<a href="/posts/<%= posts[i].id %>/edit" class="glyphicon glyphicon-pencil"></a>
-							<a class="delete-button"><div class ="glyphicon glyphicon-trash nodemon delete" id="<%= posts[i].id %>"></div></a>
+							<div class ="glyphicon glyphicon-trash nodemon delete" id="<%= posts[i].id %>"></div>
 						<% } %>
 	        <% } %>
 				</li>

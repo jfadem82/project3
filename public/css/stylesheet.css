@@ -10,6 +10,10 @@
 	border-radius: 0;
 }
 
+.navbar {
+	margin-bottom: -20px;
+}
+
 .navbar-default .navbar-brand {
 	color: white;
 }

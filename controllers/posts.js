@@ -1,7 +1,7 @@
 var Post = require('../models/post.js')
 
 function index (req, res) {
-	Post.find({}, function (err, posts) {
+	Post.find({ time: { $gt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 14)}  }).sort({time: -1}).exec( function (err, posts) {
 		if (err) console.log(err);
 		res.render('posts.ejs', {posts: posts});
 	});
@@ -41,6 +41,7 @@ function create (req, res) {
 	post.avatar_url		= req.body.avatar_url;
 	post.latitude		= req.body.latitude;
 	post.longitude		= req.body.longitude;
+	post.time 			= Date.now();
 
 	post.save(function(err, post) {
 		if (err) console.log(err)

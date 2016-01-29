@@ -17,11 +17,45 @@
       <label for="location">Address</label>
       <input class="form-control" type="address" name="location" id="location">
     </div>
-    <input class="btn btn-primary" type="submit">
+    <input class="btn btn-primary" id='send' type="submit">
+    <input type="hidden" id="latitude" name="latitude" value="" />
+    <input type="hidden" id="longitude" name="longitude" value="" />
     <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
   </form>
 
   <script type="text/javascript">
+  var cnt = 0;
+  console.log('send is loading')
+    $('#send').click(function(e){
+      // if ( !cnt ) {
+        e.preventDefault()
+      // }
+      var address = $('#location').val().split(' ').join('+')
+        $.ajax( {
+          method: 'GET',
+            url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address
+}).then(function(res){
+  console.log(res)
+  document.getElementById('latitude').value =  res.results[0].geometry.location.lat
+  document.getElementById('longitude').value = res.results[0].geometry.location.lng
+  console.log(latitude)
+  console.log(longitude)
+  $.ajax( {
+    method: 'Post',
+    url: '/posts/new',
+    data: {
+      title: $('#title').val(),
+      description: $('#description').val(),
+      avatar_url: $('#avatar_url').val(),
+      location: $('#location').val(),
+      latitude: res.results[0].geometry.location.lat,
+      longitude: res.results[0].geometry.location.lng
+    }
+  })
+  // return true;
+    });
+})
+
   /*
       Function to carry out the actual PUT request to S3 using the signed request from the app.
   */

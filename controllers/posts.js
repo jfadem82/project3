@@ -1,7 +1,7 @@
 var Post = require('../models/post.js')
 
 function index (req, res) {
-	Post.find({ time: { $gt: new Date(Date.now() - 1000 * 60 * 30)}  }).sort({time: -1}).exec( function (err, posts) {
+	Post.find({ time: { $gt: new Date(Date.now() - 1000 * 60 * 60)}  }).sort({time: -1}).exec( function (err, posts) {
 		if (err) console.log(err);
 		res.render('posts.ejs', {posts: posts});
 	});

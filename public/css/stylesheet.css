@@ -14,6 +14,10 @@
 	color: white;
 }
 
+.navbar-default .navbar-brand:hover {
+	color: white;
+}
+
 .navbar-default .navbar-nav li a:link, .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:visited {
 	color: white;
 	font-family: 'Oswald', sans-serif;
@@ -46,7 +50,7 @@
 }
 
 .glyphicon {
-	width: 5px;
+	font-size: 20px;
 }
 
 #location-index {
@@ -136,7 +140,27 @@ h2 {
 	display: inline-block;
 }
 
-.delete {
+.facebook {
+	font-size: 30px;
+}
+
+.btn-primary {
+	background-color: #52902b;
+}
+
+.btn-primary:hover {
+	background-color: #466f2d;
+}
+
+.facebook:hover {
+	background-color: #7e3135;
+}
+
+.facebook {
+	background-color: #9f3439
+}
+
+.delete{
 	display: inline-block;
 }
 

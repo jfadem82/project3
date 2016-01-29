@@ -189,3 +189,7 @@ h2 {
     border-width: 3px;
     border-style: solid;
 }
+
+.set-height {
+	height: 300px;
+}

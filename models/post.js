@@ -8,6 +8,7 @@ var postSchema 	= new mongoose.Schema ( {
 	latitude	: String,
 	longitude	: String,
 	avatar_url	: {type: String, require: true},
+	time 		: Date,
 	user 		: {type: mongoose.Schema.ObjectId, ref: 'User'}
 })
 

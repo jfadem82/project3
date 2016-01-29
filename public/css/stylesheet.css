@@ -174,3 +174,8 @@ h2 {
 .smaller2 img {
 	width: 100%;
 }
+
+.login, .signup {
+	width: 50%;
+	margin: auto;
+}

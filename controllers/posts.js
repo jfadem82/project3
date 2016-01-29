@@ -45,7 +45,6 @@ function create (req, res) {
 
 	post.save(function(err, post) {
 		if (err) console.log(err)
-		// res.redirect('/' )
 		res.json({message: "Successfully 'posted', sort of...", success: true, postId: post._id})
 	})
 }
@@ -89,7 +88,6 @@ function updatePost (req, res) {
 		})
 	})
 }
-
 
 module.exports = {
 	index: index,

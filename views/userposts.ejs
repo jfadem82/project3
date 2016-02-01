@@ -1,8 +1,10 @@
+<!-- page where user can see all the posts they have created -->
 <div class="my-posts">
 	<h2>My Posts</h2>
 	<ul class="index">
 		<div class="row">
-			<% for(var i=0; i < posts.length; i++) { %>
+			<% for(var i=0; i < posts.length; i++) { %> 
+			<!-- iterates through and displays the users posts -->
 				<div class="col-sm-6 col-md-3">
 					<li class="posting"><a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a></li>
 					<li class="smaller2"><a href="/posts/<%= posts[i].id %>"><img src="<%= posts[i].avatar_url %>"></a></li>

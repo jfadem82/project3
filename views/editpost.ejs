@@ -1,5 +1,6 @@
 <div class="edit-post">
   <h2>Edit Post</h2>
+  <!-- the form for editing -->
   <form method="post" action="/posts/<%=post._id%>">
   <input type="file" id="file_input"/>
   <p id="status">Please select a file</p>
@@ -27,6 +28,7 @@
     </div>
   </form>
 
+<!--  ajax delete action -->
   <script type="text/javascript">
     $('.nodemon').click(callDelete)
 

@@ -1,5 +1,7 @@
 var Post = require('../models/post.js')
+// requires post model
 
+//crud forthe posts model
 function index (req, res) {
 	Post.find({ time: { $gt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 14)}  }).sort({time: -1}).exec( function (err, posts) {
 		if (err) console.log(err);
@@ -8,8 +10,9 @@ function index (req, res) {
 }
 
 function userposts (req, res) {
-	var userID = req.user._id
+	var userID = req.user._id //stores user's id as variable
 	console.log(req.user._id)
+	// the line below finds all posts that belong to the user by searching for estbalishged var userID
 	Post.find({user: userID}, function(error, posts) {
 		if(error) throw error
 		res.render('userposts.ejs', {posts: posts});
@@ -88,7 +91,7 @@ function updatePost (req, res) {
 		})
 	})
 }
-
+//exports these functions
 module.exports = {
 	index: index,
 	userposts: userposts,

@@ -3,6 +3,8 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var User             = require('../models/user');
 // var configAuth       = require('./auth');
 
+
+// Using the node module passport for authentication
 module.exports = function(passport) {
   passport.serializeUser(function(user, done) {
     done(null, user.id);
@@ -14,6 +16,7 @@ module.exports = function(passport) {
     });
   });
 
+  // Signup with email and password
   passport.use('local-signup', new LocalStrategy ({
     usernameField : 'email',
     passwordField : 'password',
@@ -39,6 +42,7 @@ module.exports = function(passport) {
     });
   }));
 
+  // Login with email and password
   passport.use('local-login', new LocalStrategy ({
     usernameField : 'email',
     passwordField : 'password',
@@ -55,6 +59,7 @@ module.exports = function(passport) {
       });
   }));
 
+  // Signup and login with Facebook
   passport.use(new FacebookStrategy ({
      clientID        : process.env.FACEBOOK_APP_ID       || configAuth.facebookAuth.clientID,
      clientSecret    : process.env.FACEBOOK_APP_SECRET   || configAuth.facebookAuth.clientSecret,

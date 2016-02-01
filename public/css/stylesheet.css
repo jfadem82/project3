@@ -194,15 +194,15 @@ h2 {
 }
 
 .set-height {
-	height: 600px;
-	width: 50%;
-	margin: auto;
+	height: 500px;
+/*	width: 50%;
+	margin: auto;*/
 }
 
 
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .make_small{
     width: 100%;
-  }
+  }*/
 }

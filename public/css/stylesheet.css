@@ -194,23 +194,12 @@ h2 {
 }
 
 .set-height {
-	height: 500px;
+	height: 600px;
 	width: 50%;
 	margin: auto;
 }
 
-#map {
-	margin: auto;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	border-color: #005ca4;
-	border-width: 3px;
-	border-style: solid;
-}
 
-.set-height {
-	height: 500px;
-}
 
 @media (max-width: 600px) {
   .make_small{

@@ -1,5 +1,6 @@
 var Post = require('../models/post.js')
 
+// Displays all posts in the api
 function index (req, res) {
 	 
 	 Post.find({}, function (err, posts) {
@@ -8,6 +9,7 @@ function index (req, res) {
 	}); 
 }
 
+// Adds a new post to the api
 function newPost (req, res) {
 	var post = new Post();
 
@@ -22,6 +24,7 @@ function newPost (req, res) {
 	})
 }
 
+// Deletes a post based on its id in the api
 function removePost (req, res) {
 	var id = req.params.id
 
@@ -32,6 +35,7 @@ function removePost (req, res) {
 	})
 }
 
+// Updates a post based on its id in the api
 function updatePost (req, res) {
 	var id = req.params.id
 

@@ -1,7 +1,7 @@
 var LocalStrategy    = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var User             = require('../models/user');
-// var configAuth       = require('./auth');
+var configAuth       = require('./auth');
 
 
 // Using the node module passport for authentication

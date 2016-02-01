@@ -1,5 +1,7 @@
 var Post = require('../models/post.js')
+//requires the model 
 
+//below are crud actions for our api
 function index (req, res) {
 	 
 	 Post.find({}, function (err, posts) {
@@ -56,6 +58,7 @@ function updatePost (req, res) {
 	})
 }
 
+//makes the listed functions available 
 module.exports = { 
 	index: index,
 	newPost: newPost,

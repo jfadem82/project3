@@ -211,3 +211,9 @@ h2 {
 .set-height {
 	height: 500px;
 }
+
+@media (max-width: 600px) {
+  .make_small{
+    width: 100%;
+  }
+}

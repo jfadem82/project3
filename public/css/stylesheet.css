@@ -199,6 +199,10 @@ h2 {
 	margin: auto;*/
 }
 
+.fb-like, .fb-like span, .fb-like.fb_iframe_widget span iframe {
+    width: 100% !important;
+
+}
 
 
 /*@media (max-width: 600px) {

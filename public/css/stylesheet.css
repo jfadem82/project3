@@ -181,7 +181,7 @@ h2 {
 .smaller2 img {
 	width: 100%;
 	height: 200px;
-	/*padding-right: 20px;*/
+	padding-right: 20px;
 }
 
 .login, .signup {

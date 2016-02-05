@@ -173,12 +173,14 @@ h2 {
 }
 
 .smaller img {
-	width: 50%;
+	width: 100%;
+	height: 350px;
+	padding-right: 20px;
 }
 
 .smaller2 img {
 	width: 100%;
-	height: 50px;
+	height: 200px;
 	padding-right: 20px;
 }
 

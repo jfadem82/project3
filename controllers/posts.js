@@ -2,7 +2,7 @@ var Post = require('../models/post.js')
 
 // Displays all the posts and the post will time out in two weeks, also sorted by time posted
 function index (req, res) {
-	Post.find({ time: { $gt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 14)}  }).sort({time: -1}).exec( function (err, posts) {
+	Post.find({ time: { $gt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 900)}  }).sort({time: -1}).exec( function (err, posts) {
 		if (err) console.log(err);
 		res.render('posts.ejs', {posts: posts});
 	});

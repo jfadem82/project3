@@ -3,7 +3,7 @@
 # Project 3 - Show Me Your Junk
 Every week in Los Angeles a fortune of money and energy is spent moving 12,000 tons of waste to [Puente Hills landfill](http://www.cnn.com/2012/04/26/us/la-trash-puente-landfill/), the largest rubbish dump in America 
 
-On Avaerage, [35,000 people move to Los Angeles each year](http://www.latimes.com/business/realestate/la-fi-migration-figures-show-old-patterns-picking-up-again-20140903-story.html) from Asia, 15,000 from Central America, 8,000 from Europe, anda bout 8,500 from the New York Metro area, most of whom will want a couch 
+On Average, [35,000 people move to Los Angeles each year](http://www.latimes.com/business/realestate/la-fi-migration-figures-show-old-patterns-picking-up-again-20140903-story.html) from Asia, 15,000 from Central America, 8,000 from Europe, anda bout 8,500 from the New York Metro area, most of whom will want a couch 
 
 All items on this site are free and left as-is. Help save time and the planet by gaining or giving a couch 
 So come on...Show Me Your Junk!
@@ -68,7 +68,7 @@ If you fork this repo, you must run `npm install` in order for the app to functi
 ![Footer](/assets/footer.png)
 
 
-######Step 1: Create a profile or login.
+###### Step 1: Create a profile or login.
 Click Sign Up in Nav button then enter your information in the form or login through Facebook. Once you're logged in you can edit or delete your post.
 <br>
 
@@ -102,7 +102,7 @@ You must be logged in to add or edit a post and it requires an image and locatio
 ### Edit a Post
 ![Edit a Post Page](/assets/edit-post.png)
 
-######Step 4: My Posts
+###### Step 4: My Posts
 If you're logged in you can see all your posts.
 
 ### My Posts
@@ -110,7 +110,7 @@ If you're logged in you can see all your posts.
 
 ### UX for Project
 
-#####Flowchart
+##### Flowchart
 ![Flowchart](/assets/Project03_Flowchart.png)
 
 #####User Stories

@@ -2,3 +2,4 @@
 /couches/*.jpg
 /couches/*.png
 /config/auth.js
+.DS_Store

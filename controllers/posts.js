@@ -2,13 +2,15 @@ var Post = require('../models/post.js')
 // requires post model
 
 //crud forthe posts model
+// Displays all the posts and the post will time out in two weeks, also sorted by time posted
 function index (req, res) {
-	Post.find({ time: { $gt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 14)}  }).sort({time: -1}).exec( function (err, posts) {
+	Post.find({ time: { $gt: new Date(Date.now() - 1000 * 60 * 60 * 24 * 900)}  }).sort({time: -1}).exec( function (err, posts) {
 		if (err) console.log(err);
 		res.render('posts.ejs', {posts: posts});
 	});
 }
 
+// Displays all the posts associated with the user
 function userposts (req, res) {
 	var userID = req.user._id //stores user's id as variable
 	console.log(req.user._id)
@@ -19,6 +21,7 @@ function userposts (req, res) {
 	})
 }
 
+// Displays one post based on its id
 function show (req, res) {
 	var id = req.params.id;
 
@@ -28,10 +31,12 @@ function show (req, res) {
 	});
 }
 
+// Displays a form to add a new post
 function newPost (req, res) {
 	res.render('newpost.ejs')
 }
 
+// Saves the new post from the newPost form
 function create (req, res) {
 	console.log('req.body', req.body)
 	console.log('req.user', req.user)
@@ -52,6 +57,7 @@ function create (req, res) {
 	})
 }
 
+// Deletes a post based on its id
 function removePost (req, res) {
 	 var id = req.params.id
 
@@ -61,6 +67,7 @@ function removePost (req, res) {
 	})
 }
 
+// Displays an edit form based on the post id
 function editPost (req, res) {
 	var id = req.params.id
 	Post.findById(id, function(error, post) {
@@ -69,6 +76,7 @@ function editPost (req, res) {
 	})
 }
 
+// Saves the edited post
 function updatePost (req, res) {
 	var id = req.params.id
 

@@ -8,17 +8,19 @@ var user                = require('../models/user')
 var apiRoutes			= express.Router() //instantiating express router
 var apiController 		= require('../controllers/apis')
 
-
 //below sets routes for the api
-
+// Route to display the api json
 apiRoutes.route('/api')
 	.get(apiController.index)
 	//lists all of our posts when hit with a get request
 
+// Route to add new data to api
 apiRoutes.route('/api/new')
 	.post(apiController.newPost)
 	//creates new post when hit with a post request
 
+
+// Route to update or delete a certain post from the model using the id
 apiRoutes.route('/api/:id')
 	.delete(apiController.removePost)
 	.put(apiController.updatePost)

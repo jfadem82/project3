@@ -17,6 +17,7 @@
     <link rel="icon" 
       type="image/ico" 
       href="/images/favicon.ico" />
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -29,9 +30,9 @@
     }(document, 'script', 'facebook-jssdk'));
     </script>
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
+      <div class="-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#user-menu" aria expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -42,25 +43,25 @@
         <div class="collapse navbar-collapse" id="user-menu">
           <ul class="nav navbar-nav">
             <% if (user) { %>
-              <li><a href="/posts/new">Add Post</a></li></a>
-              <li><a href="/myposts">My Posts</a></li></a>
-              <li><a href="/logout">Logout</a></li></a>
+              <li><a href="/posts/new">Add Post <span class="sr-only">(current)</span></a></li>
+              <li><a href="/myposts">My Posts</a></li>
+              <li><a href="/logout">Logout</a></li>
             <% } else { %>
-              <li><a href="/login">Log in</a></li>
+              <li><a href="/login">Log in <span class="sr-only">(current)</span></a></li>
               <li><a href="/signup">Sign up</a></li>
             <% } %>
           </ul>
         </div>
       </div>
     </nav>
-    <img src="/images/couch1.jpeg" class="img-responsive" alt="Responsive image" />
+    <img src="https://s3.amazonaws.com/showmeyourjunkp3/header-couch-compressor.jpeg" class="img-responsive" alt="Responsive image" />
     <h1>Show Me Your Junk</h1>
 
     <main class="container">
       <%- body %>
     </main>
 
-    <nav class="navbar-default navbar-bottom">
+    <nav class="navbar-default navbar-bottom make_small">
       <div class="container">
         <a class="navbar-brand" href="/">Show Me Your Junk</a>
         <p class="copyright">@2016 Nodemon Inc.</p>

@@ -14,11 +14,14 @@
 	color: white;
 }
 
+.navbar-default .navbar-brand:hover {
+	color: white;
+}
+
 .navbar-default .navbar-nav li a:link, .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:visited {
 	color: white;
 	font-family: 'Oswald', sans-serif;
 }
-
 
 #main-body {
 	padding-top: 20px;
@@ -46,7 +49,7 @@
 }
 
 .glyphicon {
-	width: 40%;
+	font-size: 20px;
 }
 
 #location-index {
@@ -136,8 +139,32 @@ h2 {
 	display: inline-block;
 }
 
-.delete {
+.facebook {
+	font-size: 30px;
+}
+
+.btn-primary {
+	background-color: #52902b;
+	border: none;
+}
+
+.btn-primary:hover {
+	background-color: #466f2d;
+}
+
+.facebook:hover {
+	background-color: #7e3135;
+}
+
+.facebook {
+	background-color: #9f3439;
+	border: none;
+}
+
+.delete{
 	display: inline-block;
+	color: red;
+
 }
 
 .smaller img {
@@ -146,4 +173,22 @@ h2 {
 
 .smaller2 img {
 	width: 100%;
+}
+
+.login, .signup {
+	width: 50%;
+	margin: auto;
+}
+
+#map {
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-color: #005ca4;
+	border-width: 3px;
+	border-style: solid;
+}
+
+.set-height {
+	height: 500px;
 }

@@ -10,7 +10,6 @@ function postSignup (req, res) {
     failureRedirect : '/signup',
     failureFlash : true
   });
-
   return signupStrategy (req, res);
 }
 
@@ -24,7 +23,6 @@ function postLogin (req, res) {
     failureRedirect : '/login',
     failureFlash : true
 });
-
   return loginProperty (req, res);
   }
 
@@ -32,7 +30,6 @@ function getFacebook (req, res) {
   var signupStrategy = passport.authenticate ('facebook', {
      scope : 'email'
   });
-
   return signupStrategy (req, res);
  }
 
@@ -41,17 +38,12 @@ function getFacebookCallback (req, res) {
     successRedirect : '/',
     failureRedirect : '/login'
   });
-
   return loginProperty (req, res);
 }
 
 function getLogout(req, res) {
   req.logout();
   res.redirect('/');
-}
-
-function secret(req, res){
-	response.render('secret.ejs');
 }
 
 module.exports = {
@@ -61,6 +53,5 @@ module.exports = {
   postSignup: postSignup,
   getFacebook: getFacebook,
   getFacebookCallback: getFacebookCallback,
-  getLogout: getLogout,
-  secret: secret
+  getLogout: getLogout
 }

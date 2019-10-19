@@ -6,6 +6,7 @@ var passport            = require("passport");
 var usersController     = require('../controllers/users');
 var postsController     = require('../controllers/posts')
 var user                = require('../models/user')
+//requires packages and necessary files
 
 function authenticatedUser(req, res, next) {
   if (req.isAuthenticated()) return next();
@@ -22,9 +23,6 @@ router.route('/login')
 
 router.route('/logout')
   .get(usersController.getLogout)
-
-router.route('/secret')
-  .get(usersController.secret)
 
 router.route('/auth/facebook')
   .get(usersController.getFacebook)
@@ -49,7 +47,6 @@ router.route('/posts/:id')
 
 router.route('/posts/:id/edit')
   .get(authenticatedUser, postsController.editPost)
-  
-
 
 module.exports = router
+//expors and makes available these routes

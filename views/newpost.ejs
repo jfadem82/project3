@@ -1,27 +1,63 @@
 <div class="new-post">
   <h2>Add a New Post</h2>
+  <!-- the form for creaeting apost -->
   <input type="file" id="file_input"/>
   <p id="status">Please select a file</p>
   <img class="img-responsive"  id="preview" src="" />
   <form method="post" action="/posts/new">
     <input type="hidden" id="avatar_url" name="avatar_url" value="/images/default.png" />
     <div class="form-group">
-      <label for="title">Title</label>
-      <input class="form-control" type="text" name="title" id="title">
+      <label for="title">Title (max 20 characters)</label>
+      <input class="form-control" type="text" maxlength="20" name="title" id="title">
     </div>
     <div class="form-group">
       <label for="description">Description</label>
-      <input class="form-control" type="text" name="description" id="description">
+      <textarea class="form-control" type="text-area" name="description" id="description"></textarea>
     </div>
     <div class="form-group">
-      <label for="location">Address</label>
+      <label for="location">Address (required)</label>
       <input class="form-control" type="address" name="location" id="location">
     </div>
-    <input class="btn btn-primary" type="submit">
+    <input class="btn btn-primary" id='send' type="submit">
+    <input type="hidden" id="latitude" name="latitude" value="" />
+    <input type="hidden" id="longitude" name="longitude" value="" />
     <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
   </form>
 
   <script type="text/javascript">
+  var cnt = 0;
+  console.log('send is loading')
+    $('#send').click(function(e){
+        e.preventDefault()
+      var address = $('#location').val().split(' ').join('+')
+        $.ajax( {
+          method: 'GET',
+            url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address
+        }).then(function(res){
+          console.log(res)
+          document.getElementById('latitude').value =  res.results[0].geometry.location.lat
+          document.getElementById('longitude').value = res.results[0].geometry.location.lng
+          $.ajax( {
+            method: 'POST',
+            url: '/posts/new',
+            data: {
+              title: $('#title').val(),
+              description: $('#description').val(),
+              avatar_url: $('#avatar_url').val(),
+              location: $('#location').val(),
+              latitude: res.results[0].geometry.location.lat,
+              longitude: res.results[0].geometry.location.lng
+            },
+            success: function(data){
+              if(data.success){
+                console.log("Boom, let's redirect.")
+                window.location.assign('/posts/' + data.postId)
+              }
+            }
+          })
+        });
+      })
+
   /*
       Function to carry out the actual PUT request to S3 using the signed request from the app.
   */

@@ -1,12 +1,11 @@
 var Post = require('../models/post.js')
+//requires the model 
 
-
+//below are crud actions for our api
 function index (req, res) {
-	// res.json(Post.find({}))
 	 
 	 Post.find({}, function (err, posts) {
 		if (err) console.log(err);
-		// res.json({ message: 'hooray! welcome to our api!' }); 
 		res.json(posts);
 	}); 
 }
@@ -24,7 +23,6 @@ function newPost (req, res) {
 		res.json(post)
 	})
 }
-
 
 function removePost (req, res) {
 	var id = req.params.id
@@ -60,7 +58,7 @@ function updatePost (req, res) {
 	})
 }
 
-
+//makes the listed functions available 
 module.exports = { 
 	index: index,
 	newPost: newPost,

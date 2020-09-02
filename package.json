@@ -13,7 +13,7 @@
     "express": "^4.13.3",
     "express-ejs-layouts": "^2.0.0",
     "express-session": "^1.13.0",
-    "googleapis": "^2.1.7",
+    "googleapis": "^59.0.0",
     "method-override": "^2.3.5",
     "mongoose": "^4.3.6",
     "morgan": "^1.6.1",
